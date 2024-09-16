@@ -28,6 +28,7 @@ project {
     description = "A project to manage CI/CD structures in FloodAdapt"
 
     params {
+        password("FloodAdapt-GUI-ssh-passphrase", "credentialsJSON:9ef5e4f0-0c04-4b45-84ef-2ea44d0ea990")
         password("FloodAdaptCICD-ssh-passphrase", "credentialsJSON:9ef5e4f0-0c04-4b45-84ef-2ea44d0ea990")
         password("FloodAdapt-ssh-passphrase", "credentialsJSON:9ef5e4f0-0c04-4b45-84ef-2ea44d0ea990")
     }
