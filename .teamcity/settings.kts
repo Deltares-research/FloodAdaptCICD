@@ -26,4 +26,8 @@ version = "2024.03"
 
 project {
     description = "A project to manage CI/CD structures in FloodAdapt"
+
+    params {
+        password("FloodAdapt-ssh-passphrase", "credentialsJSON:9ef5e4f0-0c04-4b45-84ef-2ea44d0ea990")
+    }
 }
