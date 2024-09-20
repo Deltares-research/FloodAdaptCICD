@@ -1,5 +1,6 @@
 package floodAdapt.vcsRoots
 
+import jetbrains.buildServer.configs.kotlin.ParameterRef
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.vcs.SvnVcsRoot
 
@@ -14,6 +15,7 @@ object FloodAdaptCICD : GitVcsRoot({
     useTagsAsBranches = true
     authMethod = uploadedKey {
         uploadedKey = "FloodAdaptCICD"
+        passphrase = ParameterRef("FloodAdaptCICD-ssh-passphrase").ref
     }
 })
 
@@ -28,6 +30,7 @@ object FloodAdapt : GitVcsRoot({
     useTagsAsBranches = true
     authMethod = uploadedKey {
         uploadedKey = "FloodAdapt"
+        passphrase = ParameterRef("FloodAdapt-ssh-passphrase").ref
     }
 })
 
@@ -42,10 +45,14 @@ object FloodAdaptGUI : GitVcsRoot({
     useTagsAsBranches = true
     authMethod = uploadedKey {
         uploadedKey = "FloodAdapt-GUI"
+        passphrase = ParameterRef("FloodAdapt-GUI-ssh-passphrase").ref
     }
 })
 
 object FloodAdaptDataBase : SvnVcsRoot({
     name = "FloodAdapt-GUI"
-    url = "https://repos.deltares.nl/repos/FloodAdapt-Database/charleston_test"
+    url = "https://repos.deltares.nl/repos/FloodAdapt-Database"
+    userName = ParameterRef("svn_FloodAdapt_Username").ref
+    passphrase = ParameterRef("svn_FloodAdapt_Password").ref
+    enforceRevert = true
 })
