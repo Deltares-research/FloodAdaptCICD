@@ -6,7 +6,7 @@ import jetbrains.buildServer.configs.kotlin.vcs.SvnVcsRoot
 
 object FloodAdaptCICD : GitVcsRoot({
     name = "FloodAdaptCICD"
-    url = "https://github.com/Deltares-research/FloodAdaptCICD"
+    url = "git@github.com:Deltares-research/FloodAdaptCICD.git"
     branch = "main"
     branchSpec = """
         +:refs/heads/*
@@ -21,7 +21,7 @@ object FloodAdaptCICD : GitVcsRoot({
 
 object FloodAdapt : GitVcsRoot({
     name = "FloodAdapt"
-    url = "https://github.com/Deltares-research/FloodAdapt"
+    url = "git@github.com:Deltares-research/FloodAdapt.git"
     branch = "main"
     branchSpec = """
         +:refs/heads/*
@@ -36,7 +36,7 @@ object FloodAdapt : GitVcsRoot({
 
 object FloodAdaptGUI : GitVcsRoot({
     name = "FloodAdapt-GUI"
-    url = "https://github.com/Deltares-research/FloodAdapt-GUI"
+    url = "git@github.com:Deltares-research/FloodAdapt-GUI.git"
     branch = "main"
     branchSpec = """
         +:refs/heads/*
