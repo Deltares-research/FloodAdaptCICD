@@ -50,7 +50,7 @@ object FloodAdaptGUI : GitVcsRoot({
 })
 
 object FloodAdaptDataBase : SvnVcsRoot({
-    name = "FloodAdapt-GUI"
+    name = "FloodAdapt-Database"
     url = "https://repos.deltares.nl/repos/FloodAdapt-Database"
     userName = ParameterRef("svn_FloodAdapt_Username").ref
     passphrase = ParameterRef("svn_FloodAdapt_Password").ref
